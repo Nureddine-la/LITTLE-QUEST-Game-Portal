@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LITTLE QUEST- Game Portal</title>
+    <link rel="stylesheet" href="soha2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel=" icon" href="idle.gif" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hero-banner">
+        <h1 class="game-title">LITTLE QUEST</h1>
+        <p class="game-tagline">Fight with us</p>
+    </div>
+    <div class="corner-logo">
+        <img src="logo.jpg" alt="LITTLE QUEST Game Logo">
+    </div>
+    <nav class="main-nav">
+
+        <ul class="nav-list">
+            <li><a href="#description" class="nav-link">Description</a></li>
+            <li><a href="#characters" class="nav-link">Characters</a></li>
+            <li><a href="#enemies" class="nav-link">Enemies</a></li>
+            <li><a href="#how-to-play" class="nav-link">How to Play</a></li>
+            <li><a href="#download-section" class="nav-link">Download</a></li>
+            <li><a href="#us" class="nav-link">Our team</a></li>
+
+        </ul>
+    </nav>
+
+    <main class="content-wrapper">
+        <section id="description" class="content-section">
+            <h2 class="section-title">Description</h2>
+            <p><text>"LITTLE QUEST"</text> is a pixel 2D game made for Multidisciplinary Project by GROUP-11. It is a
+                simple
+                one-player
+                game that tells adventures of characters fighting enemies and bosses in a fantasy world full of
+                different difficulties and challenges. Join us in this exciting experience, and we hope you have an
+                enjoyable journey through the game world.</p>
+        </section>
+
+        <section id="characters" class="character-gallery content-section">
+            <h2 class="section-title">Meet Your Character</h2>
+            <div class="cards-container" id="characters-container"></div>
+            <p>"N" is just a little doll with literally nothing trying to achieve greater highs</p>
+        </section>
+
+        <section id="enemies" class="character-gallery">
+            <h2 class="section-title">Your Enemies Now!</h2>
+            <div class="cards-container" id="enemies-container">
+            </div>
+        </section>
+
+        <section id="how-to-play" class="content-section">
+            <h2 class="section-title">How to Play</h2>
+            <p>In this 2D pixel art adventure, your ultimate goal is to collect souls, defeat fierce enemies, and battle
+                through
+                multiple challenging levels to confront powerful bosses. Prove your strength and rise to become the new
+                king!<br>
+                Controls & Gameplay:<br>
+                • Jump with 'Space' (keyboard) or '✕' (controller). Press twice for a double jump!<br>
+                • Attack using 'K' or '□'. Combine with neutral, up, or down directions for different strikes. The
+                downward attack works
+                only in the air.<br>
+                • Heal with 'R' or '△'. You have limited charges—use them wisely.<br>
+                • Interact with objects using 'E' or '◯'.<br>
+                • Dash using 'Shift/L' or 'R2' to quickly avoid danger or cross gaps.<br>
+                • Use the downward air attack to parry spikes and bounce upward!<br>
+                • Dashing grants brief invincibility, perfect for escaping tight spots.<br>
+                • Stay alert—some enemies will detect you if you get too close!<br>
+                • Reaching checkpoints restores your healing charges.<br>
+                • Survive and reach the end of the level to claim victory and move one step closer to the throne!<br>
+
+            </p>
+            <!-- Content will be added when the game is finished -->
+        </section>
+
+        <section id="download-section" class="content-section download-section">
+            <h2 class="section-title">Download</h2>
+            <button class="download-btn" role="button">Download</button>
+        </section>
+
+
+        <section id="us" class="content-section team-section">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Game Developer</h3>
+                    <p>BENCHENINA Souhaib Meheni</p>
+                    <a href="mailto:as.benchenina@ensta.edu.dz">as.benchenina@ensta.edu.dz</a>
+                </div>
+                <div class="team-member">
+                    <h3>Pixel Artist</h3>
+                    <p>AIT SAID Mehdi</p>
+                    <a href="mailto:am.aitsaid@ensta.edu.dz">am.aitsaid@ensta.edu.dz</a>
+                </div>
+                <div class="team-member">
+                    <h3>Levels and Audios</h3>
+                    <p>HAMADI Imededdine</p>
+                    <a href="mailto:ai.hamadi@ensta.edu.dz">ai.hamadi@ensta.edu.dz</a>
+                </div>
+                <div class="team-member">
+                    <h3>Mobile Version</h3>
+                    <p>BRAHMI Abbas</p>
+                    <a href="mailto:aa.brahmi@ensta.edu.dz">aa.brahmi@ensta.edu.dz</a>
+                </div>
+                <div class="team-member">
+                    <h3>Web developer</h3>
+                    <p>LAMRIA Mahmoud Noureddine</p>
+                    <a href="mailto:am.lamria@ensta.edu.dz">am.lamria@ensta.edu.dz</a>
+                </div>
+                <div class="team-member">
+                    <h3>Supervising Professor</h3>
+                    <p>El Hadi KHOUMERI</p>
+                    <a href="mailto:khoumeri@enst.dz">khoumeri@enst.dz</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Soha Game Studio. All rights reserved.</p>
+
+        <a href="https://ensta.edu.dz/" target="_blank">https://ensta.edu.dz/</a>
+    </footer>
+
+    <script>
+        // Character data
+        const characters = [
+            { name: "N", image: "Player.png" }
+
+        ];
+
+        // Enemy data
+        const enemies = [
+            { name: "Beastial Dog", image: "Beastial Dog.png" },
+            { name: "Eyebite", image: "Eyebite.png" },
+            { name: "Goblin", image: "Goblin.png" },
+            { name: "Mashroom", image: "Mashroom.png" },
+            { name: "Skeleton", image: "Skeleton.png" },
+            { name: "Swamp King", image: "Swamp King.png" },
+            { name: "The Pointed Punisher", image: "The Pointed Punisher.png" },
+            { name: "Guardian of the castle", image: "Guardian of the castle.jpg" },
+            { name: "coming soon...", image: "who.png" }
+
+        ];
+        // Generate character cards
+        const charactersContainer = document.getElementById('characters-container');
+        characters.forEach(char => {
+            charactersContainer.innerHTML += `
+                <div class="character-card">
+                    <div class="card-image" style="background-image: url('${char.image}')"></div>
+                    <div class="card-content">
+                        <h3 class="character-name">${char.name}</h3>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Generate enemy cards
+        const enemiesContainer = document.getElementById('enemies-container');
+        enemies.forEach(enemy => {
+            enemiesContainer.innerHTML += `
+                <div class="character-card">
+                    <div class="card-image" style="background-image: url('${enemy.image}')"></div>
+                    <div class="card-content">
+                        <h3 class="character-name">${enemy.name}</h3>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Highlight active nav link
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY + 200;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                if (scrollPosition >= sectionTop &&
+                    scrollPosition < sectionTop + sectionHeight) {
+                    const id = section.getAttribute('id');
+                    document.querySelector(`.nav-link[href="#${id}"]`).classList.add('active');
+                } else {
+                    const id = section.getAttribute('id');
+                    document.querySelector(`.nav-link[href="#${id}"]`)?.classList.remove('active');
+                }
+            });
+        }, { passive: true });
+        //download button
+        document.querySelector('.download-btn').addEventListener('click', function () {
+            // Get user's platform more reliably
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            let platform = 'Windows';
+
+            if (/windows phone/i.test(userAgent)) {
+                platform = 'Windows Phone';
+            } else if (/android/i.test(userAgent)) {
+                platform = 'Android';
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                platform = 'iOS';
+            } else if (/mac/i.test(userAgent)) {
+                platform = 'Mac';
+            } else if (/linux/i.test(userAgent)) {
+                platform = 'Linux';
+            }
+
+            // Create download links based on platform
+            const downloadLinks = {
+                'Windows': 'Little Quest.exe',
+                'Mac': 'Little Quest.exe',
+                'Linux': 'Little Quest.exe',
+                // Remove these if you don't have mobile versions
+                'Android': 'Little Quest.apk',
+                'iOS': 'Little Quest.apk'
+            };
+
+            // Check if we have a download for this platform
+            if (downloadLinks[platform]) {
+                if (confirm(`Download Little Quest for ${platform}?`)) {
+                    // Create temporary link to trigger download
+                    const link = document.createElement('a');
+                    link.href = downloadLinks[platform];
+                    link.download = downloadLinks[platform].split('/').pop();
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    // Optional: Track downloads
+                    console.log(`Download initiated: ${platform} version`);
+                }
+            } else {
+                // Show all available downloads if platform isn't recognized
+                const availableDownloads = Object.entries(downloadLinks)
+                    .filter(([_, link]) => link)
+                    .map(([plat, _]) => plat)
+                    .join(', ');
+
+                alert(`Sorry, your platform (${platform}) isn't directly supported.\n\nAvailable downloads: ${availableDownloads}`);
+            }
+        });
+    </script>
+</body>
+
+</html>

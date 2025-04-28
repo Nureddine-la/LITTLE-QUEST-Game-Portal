@@ -1,0 +1,450 @@
+/* Modern CSS Reset */
+:root {
+    --primary: #6e45e2;
+    --secondary: #88d3ce;
+    --dark: #0f0c29;
+    --light: #f5f5f5;
+    --accent: #ff7e5f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63);
+    color: var(--light);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Hero Banner */
+.hero-banner {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        #0f0c29;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+text {
+    font-family: 'Press Start 2P', cursive;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+.game-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4rem;
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(255, 126, 95, 0.7);
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.game-tagline {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*logo*/
+.corner-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(255, 126, 95, 0.7));
+}
+
+.corner-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-fit: contain;
+}
+
+/* Make sure it doesn't overlap on mobile */
+@media (max-width: 768px) {
+    .corner-logo {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* Navigation */
+.main-nav {
+    background: rgba(15, 12, 41, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link.active {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Content Sections */
+.content-wrapper {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.content-section {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.content-section p {
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid var(--accent);
+
+}
+
+#how-to-play p {
+    max-width: 800px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid var(--accent);
+
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--secondary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0.5rem auto;
+}
+
+/* Character Gallery */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.character-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 350px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.character-card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.character-card:hover .card-content {
+    transform: translateY(0);
+}
+
+.character-name {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Download Section */
+.download-section {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.download-btn {
+    appearance: none;
+    background-color: var(--primary);
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: normal;
+    margin: 1rem auto;
+    min-height: 60px;
+    min-width: 200px;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.download-btn:hover {
+    color: #fff;
+    background-color: var(--accent);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-title {
+        font-size: 2.5rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .content-section p {
+        padding: 0 1rem;
+        text-align: left;
+    }
+}
+
+.content-section {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+
+
+/* Team Section */
+.team-section {
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.team-member h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.team-member p {
+    margin: 0.5rem 0;
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.team-member a {
+    color: var(--secondary);
+    text-decoration: none;
+    display: block;
+    margin: 0.3rem 0;
+    word-break: break-word;
+}
+
+.team-member a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+a {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: var(--secondary);
+    opacity: 0.8;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+a:active {
+    color: #ff3c00;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+@media (max-width: 768px) {
+    .nav-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .nav-list.active {
+        max-height: 500px;
+    }
+}
